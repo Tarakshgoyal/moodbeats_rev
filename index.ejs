@@ -12,10 +12,22 @@
             <div class="logo">
             <h1>M o o d  B e a t s</h1>
             </div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Explore</a></li>
-                <li><a href="#">Playlist</a></li>
+            <ul class="dd">
+                <li>
+                    <button class="hom">Home</button>
+                    <div class="dd-con">
+                        <a href="#">Recently Played</a>
+                        <a href="#">Recommended</a>
+                        <a href="#">Trending</a>
+                    </div>
+                <li>
+                    <button class="hom">Explore</button>
+                    <div class="dd-con">
+                        <a href="#">About Moodbeats</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact info</a>
+                    </div>
+                <li><button class="hom">Playlists</button></li>
                 <li><button id="signInBtn" class="sign-in-btn">Sign In</button>
 
                     <!-- Login Popup Modal -->
@@ -40,7 +52,7 @@
             <img height=600px src="https://i.imgur.com/g0wHZhP.png" alt="MoodBeats Logo">
             <h2>Let the music match your mood</h2>
             <p>Discover playlists curated to fit your emotions, powered by Sonify, our AI chatbot.</p>
-            <button id="open-chatbot-btn">Chat with Sonify</button>
+            <button id="open-chatbot-btn">Chat with Sonify</button> <br>
         </section>
 
         <!-- Login Modal -->
@@ -81,17 +93,19 @@
             <p>&copy; 2024 MoodBeats. All rights reserved. | Slogan: "Where your mood meets the beat"</p>
         </footer>
     </main>
-    <iframe src="https://open.spotify.com/embed/track/0yNtxKkXSpTuKaNSCaGNPB" 
-            width="300" 
-            height="380" 
-            frameborder="0" 
-            allowtransparency="true" 
-            allow="encrypted-media"></iframe>
-<script>
-        window.onSpotifyIframeApiReady = (IFrameAPI) => {
+
+    <label id="playlist"><u>Playlists</u></label><br>
+
+    <div style="text-align: center;">
+        <iframe class="sptf" style="border-radius:20px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTwbZHrJRIgD?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <br>
+        <iframe class="sptf" style="border-radius:20px" src="https://open.spotify.com/embed/playlist/2sOMIgioNPngXojcOuR4tn?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <br>
+        <iframe class="sptf" style="border-radius:20px" src="https://open.spotify.com/embed/playlist/5ZHDTCfZgdBMo4kkl9gHuG?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>        window.onSpotifyIframeApiReady = (IFrameAPI) => {
           let element = document.getElementById('spotify-player');
           let options = {
-            uri: 'spotify:track:{0yNtxKkXSpTuKaNSCaGNPB}' // or playlist, artist, etc.
+            uri: 'spotify:track:0yNtxKkXSpTuKaNSCaGNPB' // or playlist, artist, etc.
           };
           let callback = (EmbedController) => {
             console.log('Embed is ready');
