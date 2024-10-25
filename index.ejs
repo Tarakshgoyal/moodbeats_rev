@@ -16,9 +16,22 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Explore</a></li>
                 <li><a href="#">Playlist</a></li>
-                <li><a href="#" id="login-btn">Login</a></li>
-            </ul>
-        </nav>
+                <li><button id="signInBtn" class="sign-in-btn">Sign In</button>
+
+                    <!-- Login Popup Modal -->
+                    <div id="login-popup" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <span id="close-login-btn" class="close">&times;</span>
+                            <h2>Login to MoodBeats</h2>
+                            <form id="loginForm">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username" required>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required>
+                                <button type="submit" class="login-btn">Login</button>
+                            </form>
+                        </div>
+                    </div>        </nav>
     </header>
 
     <main>
