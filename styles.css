@@ -35,7 +35,7 @@ nav ul li a {
   font-size: 1.75em;
   transition: all 0.3s ease-in-out; /* Smooth transition */
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 
 
 }
@@ -80,7 +80,7 @@ nav ul li a :hover {
   font-size: 18px;
   transition: all 0.3s ease-in-out; /* Smooth transition */
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   
 }
 
@@ -364,3 +364,58 @@ input[type="password"] {
 label{
   color: #0d0d0d;
 }
+
+#playlist{
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.hom{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1a1a1a;
+  color:white;
+  font-size: 1.5em;
+  border-width: 0px;
+  padding-top: 10px;
+  transition: color 0.5s ease; /* Fades the text color over 0.4 seconds */
+
+}
+
+.hom:hover{
+  color: #3c70bd;
+  cursor: pointer;
+}
+
+.dd-con {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #1c1e2a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  font-size: 0.7em;
+  border-radius: 7px;
+  transition: color 1s ease; /* Fades the text color over 0.4 seconds */
+}
+
+
+/* Dropdown Links */
+.dd-con a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dd-con a:hover {
+  background-color:#2b73e0;
+}
+
+.dd li:hover .dd-con {
+  display: block;
+}
+
