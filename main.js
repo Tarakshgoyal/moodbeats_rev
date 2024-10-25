@@ -75,27 +75,32 @@ chatInput.addEventListener('keydown', function(event) {
     }
 });
 
-var modal = document.getElementById("loginModal");
+const loginPopup = document.getElementById('login-popup');
+const signInBtn = document.getElementById('signInBtn');
+const closeLoginBtn = document.getElementById('close-login-btn');
 
-// Get the button that opens the modal
-var btn = document.getElementById("signInBtn");
+// Open login modal with animation
+signInBtn.onclick = function() {
+    loginPopup.style.display = 'flex'; // Make the modal visible
+    setTimeout(() => {
+        loginPopup.style.opacity = '1'; // Apply fade-in effect
+    }, 10); // Delay added for smooth transition
+};
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// Close login modal
+closeLoginBtn.onclick = function() {
+    loginPopup.style.opacity = '0'; // Start fade-out
+    setTimeout(() => {
+        loginPopup.style.display = 'none'; // Hide the modal after fade-out completes
+    }, 400); // Match the CSS transition timing
+};
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
+// Close modal when clicking outside content
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target === loginPopup || event.target === chatbotPopup) {
+        event.target.style.opacity = '0'; // Start fade-out when clicking outside
+        setTimeout(() => {
+            event.target.style.display = 'none'; // Hide the modal after fade-out
+        }, 400); // Match the transition timing
     }
-}
+};
