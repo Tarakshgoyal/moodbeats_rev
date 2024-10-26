@@ -17,13 +17,13 @@
                     <button class="hom">Home</button>
                     <div class="dd-con">
                         <a href="http://127.0.0.1:5500/index.html">Recently Played</a>
-                        <a href="#">Recommended</a>
-                        <a href="#">Trending</a>
+                        <a href="http://127.0.0.1:5500/index.html">Recommended</a>
+                        <a href="http://127.0.0.1:5500/index.html">Trending</a>
                     </div>
                 <li>
                     <button class="hom">Explore</button>
                     <div class="dd-con">
-                        <a href="#">About Moodbeats</a>
+                        <a href="http://127.0.0.1:5501/about%20us/index3.html#explore">About Moodbeats</a>
                         <a href="#">About Us</a>
                         <a href="#">Contact info</a>
                     </div>
@@ -52,7 +52,7 @@
             <img height=600px src="https://i.imgur.com/g0wHZhP.png" alt="MoodBeats Logo">
             <h2>Let the music match your mood</h2>
             <p>Discover playlists curated to fit your emotions, powered by Sonify, our AI chatbot.</p>
-            <button id="open-chatbot-btn">Chat with Sonify</button> <br>
+            <button id="open-chatbot-btn">Chat with Sonify</button>
         </section>
 
         <!-- Login Modal -->
@@ -93,16 +93,14 @@
             <p>&copy; 2024 MoodBeats. All rights reserved. | Slogan: "Where your mood meets the beat"</p>
         </footer>
     </main>
-
-    <label id="playlist"><u>Playlists</u></label><br>
-
-    <div style="text-align: center;">
-        <iframe class="sptf" style="border-radius:20px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTwbZHrJRIgD?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <br>
-        <iframe class="sptf" style="border-radius:20px" src="https://open.spotify.com/embed/playlist/2sOMIgioNPngXojcOuR4tn?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <br>
-        <iframe class="sptf" style="border-radius:20px" src="https://open.spotify.com/embed/playlist/5ZHDTCfZgdBMo4kkl9gHuG?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>        window.onSpotifyIframeApiReady = (IFrameAPI) => {
+    <iframe src="https://open.spotify.com/embed/track/0yNtxKkXSpTuKaNSCaGNPB" 
+            width="300" 
+            height="380" 
+            frameborder="0" 
+            allowtransparency="true" 
+            allow="encrypted-media"></iframe>
+<script>
+        window.onSpotifyIframeApiReady = (IFrameAPI) => {
           let element = document.getElementById('spotify-player');
           let options = {
             uri: 'spotify:track:0yNtxKkXSpTuKaNSCaGNPB' // or playlist, artist, etc.
